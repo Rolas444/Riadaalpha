@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Riada.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Riada
 {
@@ -33,6 +35,11 @@ namespace Riada
                     builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                 });
             });
+            services.AddDbContext<Context>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                });
+            //services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Riada.Models
 {
-    public class Context : DbContext
+    public class RiadaContext : DbContext
     {
-        public Context(DbContextOptions<Context> options) : base(options)
+        public RiadaContext(DbContextOptions<RiadaContext> options) : base(options)
         {
 
         }
@@ -20,5 +20,6 @@ namespace Riada.Models
         public DbSet<Person> Person { get; set; }
         public DbSet<TipoDoc> tipoDocs { get; set; }
         public DbSet<Ubigeo> ubigeos { get; set; }
+        public DbSet<Participation> Participations { get; set; }
     }
 }

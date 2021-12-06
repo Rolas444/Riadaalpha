@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace Riada.Models
 {
-    public class Parcipation
+    public class Participation
     {
         public int Id { get; set; }
         public Evento Evento { get; set; }
-        public Member Member { get; set; }
-        public DateTime? DateEvent { get; set; }
+        public Person Person { get; set; }
         public int Estado { get; set; }
     }
 }

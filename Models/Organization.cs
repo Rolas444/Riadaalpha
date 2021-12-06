@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 
 namespace Riada.Models
 {
-    public class Evento
+    public class Organization
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string DocumentID { get; set; }
+        public Typedocument Tdocument { get; set; }
         public string Description { get; set; }
-        public int State { get; set; }
-        public ICollection<Participation> participations { get; set; }
+        public Address Address { get; set; }
+        
     }
 }

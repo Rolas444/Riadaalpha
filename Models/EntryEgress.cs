@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace Riada.Models
 {
-    public class TipoDoc
+    public class EntryEgress
     {
         public int Id { get; set; }
-        public string Desc { get; set; }
-        public string Code { get; set; }
-        public int Active { get; set; }
-        
+        public string Description { get; set; }
+
     }
 }
